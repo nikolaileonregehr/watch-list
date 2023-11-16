@@ -7,4 +7,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  root to: "lists#index"
+  #saying that we want to use index of lists instead of localhost start page
+
+  resources :lists do
+    resources :bookmarks
+  end
+
+
 end
